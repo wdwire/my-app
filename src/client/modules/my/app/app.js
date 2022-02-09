@@ -17,6 +17,58 @@ export default class App extends LightningElement {
     */
    //this will work because track "tracks" reactivity ins
 
+//    homePage=false;
+
+   aboutPage=false;
+
+   estimatePage=false;
+
+   watchPage=false;
+
+   modifyPage=false;
+
+
+   watch(){
+       this.watchPage=true;
+       this.modifyPage=false;
+       this.aboutPage=false;
+       this.estimatePage=false;
+       this.servicesPage=false;
+   }
+
+   modify(){
+    this.watchPage=false;
+    this.modifyPage=true;
+    this.aboutPage=false;
+    this.estimatePage=false;
+    this.servicesPage=false;
+}
+
+about(){
+    this.watchPage=false;
+    this.modifyPage=false;
+    this.aboutPage=true;
+    this.estimatePage=false;
+    this.servicesPage=false;
+}
+
+home(){
+    this.watchPage=false;
+    this.modifyPage=false;
+    this.aboutPage=false;
+    this.estimatePage=false;
+}
+
+estimate(){
+ this.watchPage=false;
+ this.modifyPage=false;
+ this.aboutPage=false;
+ this.servicesPage=false;
+ this.estimatePage=true;
+}
+
+
+
    @track people = [
        {id: '1gds4a541', Name: "John"},
        {id: '2fdsaf343', Name: "Joe"},
